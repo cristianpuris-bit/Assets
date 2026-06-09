@@ -1,19 +1,29 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ejercicio13 : MonoBehaviour
 {
-    List<int> vidaDeLosEnemigos = new List<int>() { 100, 100, 100, 200 };
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    List<int> salud = new List<int>() { 0, 0, 150, 100, 200 };
+
     void Start()
     {
-        
+        int i = 0;
+
+        while (i < salud.Count)
+        {
+            
+           
+            if (salud[i] > 0)
+            {
+                Debug.Log($" salud del enemigo {i}: {salud[i]}");
+            }
+            i++;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
